@@ -1,0 +1,135 @@
+/* Reset some basic styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #1a1a1a;
+    line-height: 1.6;
+}
+
+header {
+    background: #3a0a4d; /* Goodly royal purple */
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.menu-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Default max width for general layout */
+    margin: auto;
+    padding: 0 20px;
+}
+
+.menu-bar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e60023; /* Accent color on hover */
+}
+
+main {
+    margin-top: 60px; /* Offset for the fixed header */
+}
+
+.hero {
+    position: relative;
+    background: url('acess/img/muumy.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for text contrast */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    text-align: center;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.hero-content h2 {
+    margin-bottom: 20px;
+    color: #e60023; /* Accent color for headings */
+}
+
+.hero-content ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+footer {
+    background: #3a0a4d; /* Goodly royal purple */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #e60023; /* Accent color on hover */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
